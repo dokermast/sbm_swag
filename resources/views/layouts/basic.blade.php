@@ -28,9 +28,47 @@
     </div>
 @endif
 
+<div class="container-fluid text-center" style="background-color: #6c757d;">
+    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+        THIS PROJECT DESCRIPTION
+    </button>
+</div>
+
 <div class="text-center" style="background-color: #6c757d; color: white;"><h2>Shipment Service</h2></div>
 
 @yield('content')
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Project Description</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                в Вашем АПИ отстутствуют необходимые для выполнения задания энд-поинты.
+                в частности нужны:
+                <br>
+                - енд-поинт для получения всех Items
+                <br>
+                - енд-поинт для получения всех Items по shipment_id
+                <br>
+                Если я правильно понял структуру Вашего АПИ, то там должны быть сущности Shipment и  Item,
+                и между ними должна быть связь "многие-ко-многим" через дополнительную таблицу
+                <br>
+                ТЗ сделано в MVC паттерне, если нужно, могу переделать на одностраничник с  Ajax-запросами
+                <br>
+                ссылка на Гит Этого проекта <a class="btn btn-outline-secondary" href="https://github.com/dokermast/sbm_swag.git" target="_blank" >Test Task GIT Link</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

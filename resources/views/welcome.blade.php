@@ -2,24 +2,23 @@
 
 @section('content')
 
-    @if (Route::has('login'))
+    @if ( session('token') )
         <div class="container text-center">
-            @auth
-                <a class="btn btn-primary" href="{{ url('/home') }}">Home</a>
-
-                <a class="btn btn-secondary"  href="{{ route('logout', app()->getLocale()) }}" onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-
+            <a class="btn btn-secondary"  href="{{ route('logout') }}">Logout</a>
+        </div>
     @else
-                <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
-
-                @if (Route::has('register'))
-                    <a class="btn btn-primary" href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
+        <div class="container text-center">
+            <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
         </div>
     @endif
+
+{{--    <br>--}}
+{{--    <br>--}}
+{{--    <div class="container-fluid text-center">--}}
+{{--        <!-- Button trigger modal -->--}}
+{{--        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">--}}
+{{--            THIS PROJECT DESCRIPTION--}}
+{{--        </button>--}}
+{{--    </div>--}}
 
 @endsection

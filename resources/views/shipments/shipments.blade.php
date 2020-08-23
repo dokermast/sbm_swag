@@ -4,7 +4,7 @@
     <div class="container">
         <div class="text-center"><h3>SHIPMENTS</h3></div>
         <div class="text-center">
-            <a class="btn btn-secondary btn-sm" href="{{ route('home') }}">Home page</a>
+            <a class="btn btn-secondary btn-sm" href="{{ route('welcome') }}">Welcome Page</a>
         </div>
         <br>
         <div class="container">
