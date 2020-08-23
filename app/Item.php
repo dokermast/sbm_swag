@@ -22,18 +22,4 @@ class Item
             ['status' => false, 'msg' => $response['message']];
     }
 
-    public static function itemGet($id)
-    {
-
-    }
-
-    public static function itemPut(Request $request, $id)
-    {
-
-    }
-
-    public static function itemDelete(Request $request, $id)
-    {
-
-    }
 }

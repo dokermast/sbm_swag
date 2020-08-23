@@ -12,13 +12,4 @@
         </div>
     @endif
 
-{{--    <br>--}}
-{{--    <br>--}}
-{{--    <div class="container-fluid text-center">--}}
-{{--        <!-- Button trigger modal -->--}}
-{{--        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">--}}
-{{--            THIS PROJECT DESCRIPTION--}}
-{{--        </button>--}}
-{{--    </div>--}}
-
 @endsection
