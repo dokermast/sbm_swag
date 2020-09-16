@@ -24,6 +24,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/api_login', 'Client\LoginController@login')->name('api_login');
 Route::get('/logout', 'Client\LoginController@logout')->name('logout');
 
+
+
+Route::get('/centurion', 'Client\ShipmentController@cents')->name('cents');
+
+
+
+
 Route::group(['middleware' => ['check.token']], function () {
     Route::prefix('shipment')->group(function () {
         Route::get('/', 'Client\ShipmentController@shipment')->name('shipments');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Shipment;
+use Illuminate\Support\Facades\Http;
 
 class ShipmentController extends Controller
 {
@@ -62,6 +63,15 @@ class ShipmentController extends Controller
         Shipment::shipmentDelete(session('token'), $id);
 
         return redirect('shipment')->with('status', "Shipment was deleted");
+    }
+
+
+
+    public function cents()
+    {
+        $response = Http::get('http://palapi/api/books');
+
+        dd($response->body());
     }
 
 }
